@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="pipespin" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pipespin" TARGET_NAME="pipespin" CONFIG_NAME="gba" RUN_TARGET_PROJECT_NAME="pipespin" RUN_TARGET_NAME="pipespin">
+    <envs>
+      <env name="Path" value="%Path%;c:\devkitPro\tools\bin" />
+    </envs>
+    <method v="2">
+      <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+    </method>
+  </configuration>
+</component>

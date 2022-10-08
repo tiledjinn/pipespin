@@ -192,11 +192,11 @@ void drawLsScreen ()
         setSprite(1, lsLevelX + (lCursorX * lsLevelXOff), lCursorY == 0 ? lsLevelY1 : lsLevelY2, (fontStartTile << 2) + startLevel + fontNumberStart, fontPalNum + loopScorePal, gameUIPrio, false, false, 4);
     }
     //print scores
-    posprintf(maxLoopString, "%2d", levelScores[startLevel].maxLoop);
+    sprintf(maxLoopString, "%2d", levelScores[startLevel].maxLoop);
     for (int j = 0; j < 3; j++) {
         if (levelScores[startLevel].score[j] > 0) {
-            posprintf(scoreString, scorePrintf, levelScores[startLevel].score[j]);
-            posprintf(nameString, "%s", levelScores[startLevel].name[j]);
+            sprintf(scoreString, scorePrintf, levelScores[startLevel].score[j]);
+            sprintf(nameString, "%s", levelScores[startLevel].name[j]);
         } else {
             for (int i = 0; i < scoreMaxDigits; i++) {
                 scoreString[i] = '.';
@@ -252,12 +252,12 @@ void drawScore ()
 //---------------------------------------------------------------------------------
 {
     //score display
-    posprintf(scoreString, scorePrintf, score);
-    posprintf(pipesString, "%5d", pipesCleared);
-    posprintf(levelString, "%2d", level);
-    posprintf(maxLoopString, "%2d", maxLoop);
-    posprintf(hiScoreString, scorePrintf, levelScores[startLevel].score[0]);
-    posprintf(hiMaxLoopString, "%2d", levelScores[startLevel].maxLoop);
+    sprintf(scoreString, scorePrintf, score);
+    sprintf(pipesString, "%5d", pipesCleared);
+    sprintf(levelString, "%2d", level);
+    sprintf(maxLoopString, "%2d", maxLoop);
+    sprintf(hiScoreString, scorePrintf, levelScores[startLevel].score[0]);
+    sprintf(hiMaxLoopString, "%2d", levelScores[startLevel].maxLoop);
     if (scoreString[scoreMaxDigits - 5 - 1] == ' ') {
         scorePal = 0;
     } else {
@@ -784,7 +784,7 @@ void showLoopScore (int x, int y, int score)
             ls = i;
         }
     }
-    posprintf(lScore[ls].scoreString, "%5d", score);
+    sprintf(lScore[ls].scoreString, "%5d", score);
     lScore[ls].numDigits = 5;
     int i = 0;
     while (lScore[ls].scoreString[i] == ' ') {

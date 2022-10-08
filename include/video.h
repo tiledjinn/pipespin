@@ -84,7 +84,6 @@
 //#include <stdio.h>
 
 // local headers
-#include "posprintf.h"
 #include "hiscores.h"
 #include "menu.h"
 #include "game.h"
